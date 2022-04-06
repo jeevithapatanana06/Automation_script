@@ -26,7 +26,6 @@ class Test_SearchCustomerByEmail_004:
         self.logger.info("************* Login succesful **********")
 
         self.logger.info("******* Starting Search Customer By Email **********")
-
         self.addcust = AddCustomer(self.driver)
         self.addcust.clickOnCustomersMenu()
         self.addcust.clickOnCustomersMenuItem()

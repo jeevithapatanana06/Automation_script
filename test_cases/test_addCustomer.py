@@ -28,14 +28,13 @@ class Test_003_AddCustomer:
         self.lp.clickLogin()
         time.sleep(4)
 
-        self.addcust=AddCustomer(self.driver)
+        self.addcust =AddCustomer(self.driver)
         self.addcust.clickOnCustomersMenu()
         self.addcust.clickOnCustomersMenuItem()
-        self.logger.info("********* new customer is adding************")
         self.addcust.clickOnAddnew()
-        self.email = self.random_generator() + "@gmail.com"
-        self.addcust.setEmail(self.email)
-        #self.addcust.setEmail("drumak@gmail.com")
+        #self.email = self.random_generator()+ "@gmail.com"
+        #self.addcust.setEmail(self.email)
+        self.addcust.setEmail("itcratshyd@gmail.com")
         time.sleep(2)
         self.addcust.setPassword("test123")
         time.sleep(2)
@@ -53,7 +52,7 @@ class Test_003_AddCustomer:
         time.sleep(2)
         self.addcust.setManagerOfVendor("Vendor 2")
         time.sleep(2)
-        self.addcust.setAdminContent("This is for Automation_testing.........")
+        self.addcust.setAdminContent("NON YOLO [ now r never --- you onlu live once ]........")
         time.sleep(2)
         self.addcust.clickOnSave()
 
@@ -68,17 +67,12 @@ class Test_003_AddCustomer:
             assert True
             self.logger.info("********* Add customer Test Passed *********")
         else:
-            self.driver.save_screenshot(".\\Screenshots\\" + "12:27_test_addCustomer_scr.png")  # Screenshot
+            self.driver.save_screenshot(".\\screenshots\\" + "_test_addCust_scr.png")  # Screenshot
             self.logger.error("********* Add customer Test Failed ************")
             assert False
 
         self.driver.close()
         self.logger.info("******* Ending Add customer test **********")
 
-    '''def random_generator(size=8, chars=string.ascii_lowercase + string.digits):
-        return ''.join(random.choice(chars) for x in range(size))'''
-    def random_generator(size = 8, chars = string.ascii_lowercase+string.digits):
-           return ''.join(random.choice(chars)for x in range(size))
-
-
-
+    '''def random_generator(size):
+        return ''.join(random.choice(string.ascii_lowercase + string.digits) for x in range(size))'''

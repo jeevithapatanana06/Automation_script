@@ -7,7 +7,7 @@ import time
 
 class Test_002_DDT_Login():
     baseURL = ReadConfig.getApplicationURL()
-    path = ".//test_data/DDT.xlsx"
+    path = ".//test_data/Logindata.xlsx"
     logger = LogGen.loggen()  # Logger
 
 #    @pytest.mark.regression
@@ -54,6 +54,7 @@ class Test_002_DDT_Login():
                     self.logger.info("**** passed ****")
                     lst_status.append("Pass")
             print(lst_status)
+
         if "Fail" not in lst_status:
             self.logger.info("******* DDT Login test passed **********")
             self.driver.close()

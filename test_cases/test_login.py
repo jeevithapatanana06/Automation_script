@@ -24,7 +24,7 @@ class Test_001_Login:
 
         if act_title == "Your store. Login":
             self.logger.info("**** Home page title test passed ****")
-            self.driver.save_screenshot(".\\Screenshots\\" + "test_homePageTitle.png")
+            self.driver.save_screenshot(".\\screenshots\\" + "test_homePage.png")
             self.driver.close()
             assert True
         else:
@@ -56,6 +56,6 @@ class Test_001_Login:
             assert True
         else:
             self.logger.error("****Login test failed ****")
-            self.driver.save_screenshot(".\\Screenshots\\" + "test_Login.png")
+            self.driver.save_screenshot(".\\screenshots\\" + "test_login.png")
             self.driver.close()
 #            assert False

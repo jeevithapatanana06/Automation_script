@@ -7,9 +7,9 @@ def setup(browser):
     if browser=='edge':
         driver=webdriver.Edge("C:\\edgedriver_win64\\msedgedriver.exe")
         print("Launching chrome browser.........")
-    elif browser=='firefox':
-        driver = webdriver.Firefox("C:\\geckodriver-v0.30.0-win64\\geckodriver.exe")
-        print("Launching firefox browser.........")
+    elif browser=='chrome':
+        driver = webdriver.Chrome("C:\\chromedriver_win32 (1)\\chromedriver.exe")
+        print("Launching chrome browser.........")
     return driver
 
 def pytest_addoption(parser):    # This will get the value from CLI /hooks
